@@ -14,7 +14,8 @@
 		8C18FCFA1CCAE4E700E0B180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C18FCF81CCAE4E700E0B180 /* LaunchScreen.storyboard */; };
 		8C18FD031CCAE78200E0B180 /* HeroTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C18FD021CCAE78200E0B180 /* HeroTableViewController.m */; };
 		8C18FD061CCAE7A700E0B180 /* HeroDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C18FD051CCAE7A700E0B180 /* HeroDetailViewController.m */; };
-		8C18FD091CCAE84300E0B180 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18FD081CCAE84300E0B180 /* Hero.swift */; };
+		8C6D5D111CCBDB38004CF813 /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6D5D101CCBDB38004CF813 /* Hero.m */; };
+		8C6D5D131CCBE451004CF813 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C6D5D121CCBE451004CF813 /* heroes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +31,9 @@
 		8C18FD021CCAE78200E0B180 /* HeroTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroTableViewController.m; sourceTree = "<group>"; };
 		8C18FD041CCAE7A700E0B180 /* HeroDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroDetailViewController.h; sourceTree = "<group>"; };
 		8C18FD051CCAE7A700E0B180 /* HeroDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroDetailViewController.m; sourceTree = "<group>"; };
-		8C18FD071CCAE84200E0B180 /* Hero Tracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hero Tracker-Bridging-Header.h"; sourceTree = "<group>"; };
-		8C18FD081CCAE84300E0B180 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hero.swift; path = "Hero Tracker/Hero.swift"; sourceTree = "<group>"; };
+		8C6D5D0F1CCBDB38004CF813 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
+		8C6D5D101CCBDB38004CF813 /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
+		8C6D5D121CCBE451004CF813 /* heroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,10 +50,8 @@
 		8C18FCDE1CCAE4E700E0B180 = {
 			isa = PBXGroup;
 			children = (
-				8C18FD081CCAE84300E0B180 /* Hero.swift */,
 				8C18FCE91CCAE4E700E0B180 /* Hero Tracker */,
 				8C18FCE81CCAE4E700E0B180 /* Products */,
-				8C18FD071CCAE84200E0B180 /* Hero Tracker-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,11 +71,14 @@
 				8C18FCF31CCAE4E700E0B180 /* Main.storyboard */,
 				8C18FD011CCAE78200E0B180 /* HeroTableViewController.h */,
 				8C18FD021CCAE78200E0B180 /* HeroTableViewController.m */,
+				8C6D5D0F1CCBDB38004CF813 /* Hero.h */,
+				8C6D5D101CCBDB38004CF813 /* Hero.m */,
 				8C18FD041CCAE7A700E0B180 /* HeroDetailViewController.h */,
 				8C18FD051CCAE7A700E0B180 /* HeroDetailViewController.m */,
 				8C18FCF61CCAE4E700E0B180 /* Assets.xcassets */,
 				8C18FCF81CCAE4E700E0B180 /* LaunchScreen.storyboard */,
 				8C18FCFB1CCAE4E700E0B180 /* Info.plist */,
+				8C6D5D121CCBE451004CF813 /* heroes.json */,
 				8C18FCEA1CCAE4E700E0B180 /* Supporting Files */,
 			);
 			path = "Hero Tracker";
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C18FCFA1CCAE4E700E0B180 /* LaunchScreen.storyboard in Resources */,
+				8C6D5D131CCBE451004CF813 /* heroes.json in Resources */,
 				8C18FCF71CCAE4E700E0B180 /* Assets.xcassets in Resources */,
 				8C18FCF51CCAE4E700E0B180 /* Main.storyboard in Resources */,
 			);
@@ -160,7 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C18FD091CCAE84300E0B180 /* Hero.swift in Sources */,
+				8C6D5D111CCBDB38004CF813 /* Hero.m in Sources */,
 				8C18FD031CCAE78200E0B180 /* HeroTableViewController.m in Sources */,
 				8C18FD061CCAE7A700E0B180 /* HeroDetailViewController.m in Sources */,
 				8C18FCEF1CCAE4E700E0B180 /* AppDelegate.m in Sources */,
@@ -320,6 +324,7 @@
 				8C18FD001CCAE4E700E0B180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HeroDetailViewController.h"
 
 @interface AppDelegate ()
 
