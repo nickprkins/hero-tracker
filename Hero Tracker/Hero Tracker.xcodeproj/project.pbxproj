@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		8C18FCEC1CCAE4E700E0B180 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C18FCEB1CCAE4E700E0B180 /* main.m */; };
 		8C18FCEF1CCAE4E700E0B180 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C18FCEE1CCAE4E700E0B180 /* AppDelegate.m */; };
-		8C18FCF21CCAE4E700E0B180 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C18FCF11CCAE4E700E0B180 /* ViewController.m */; };
 		8C18FCF51CCAE4E700E0B180 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C18FCF31CCAE4E700E0B180 /* Main.storyboard */; };
 		8C18FCF71CCAE4E700E0B180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C18FCF61CCAE4E700E0B180 /* Assets.xcassets */; };
 		8C18FCFA1CCAE4E700E0B180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C18FCF81CCAE4E700E0B180 /* LaunchScreen.storyboard */; };
+		8C18FD031CCAE78200E0B180 /* HeroTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C18FD021CCAE78200E0B180 /* HeroTableViewController.m */; };
+		8C18FD061CCAE7A700E0B180 /* HeroDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C18FD051CCAE7A700E0B180 /* HeroDetailViewController.m */; };
+		8C18FD091CCAE84300E0B180 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18FD081CCAE84300E0B180 /* Hero.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +22,16 @@
 		8C18FCEB1CCAE4E700E0B180 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C18FCED1CCAE4E700E0B180 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8C18FCEE1CCAE4E700E0B180 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8C18FCF01CCAE4E700E0B180 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8C18FCF11CCAE4E700E0B180 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8C18FCF41CCAE4E700E0B180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C18FCF61CCAE4E700E0B180 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C18FCF91CCAE4E700E0B180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C18FCFB1CCAE4E700E0B180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C18FD011CCAE78200E0B180 /* HeroTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroTableViewController.h; sourceTree = "<group>"; };
+		8C18FD021CCAE78200E0B180 /* HeroTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroTableViewController.m; sourceTree = "<group>"; };
+		8C18FD041CCAE7A700E0B180 /* HeroDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroDetailViewController.h; sourceTree = "<group>"; };
+		8C18FD051CCAE7A700E0B180 /* HeroDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroDetailViewController.m; sourceTree = "<group>"; };
+		8C18FD071CCAE84200E0B180 /* Hero Tracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hero Tracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		8C18FD081CCAE84300E0B180 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hero.swift; path = "Hero Tracker/Hero.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,8 +48,10 @@
 		8C18FCDE1CCAE4E700E0B180 = {
 			isa = PBXGroup;
 			children = (
+				8C18FD081CCAE84300E0B180 /* Hero.swift */,
 				8C18FCE91CCAE4E700E0B180 /* Hero Tracker */,
 				8C18FCE81CCAE4E700E0B180 /* Products */,
+				8C18FD071CCAE84200E0B180 /* Hero Tracker-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,9 +68,11 @@
 			children = (
 				8C18FCED1CCAE4E700E0B180 /* AppDelegate.h */,
 				8C18FCEE1CCAE4E700E0B180 /* AppDelegate.m */,
-				8C18FCF01CCAE4E700E0B180 /* ViewController.h */,
-				8C18FCF11CCAE4E700E0B180 /* ViewController.m */,
 				8C18FCF31CCAE4E700E0B180 /* Main.storyboard */,
+				8C18FD011CCAE78200E0B180 /* HeroTableViewController.h */,
+				8C18FD021CCAE78200E0B180 /* HeroTableViewController.m */,
+				8C18FD041CCAE7A700E0B180 /* HeroDetailViewController.h */,
+				8C18FD051CCAE7A700E0B180 /* HeroDetailViewController.m */,
 				8C18FCF61CCAE4E700E0B180 /* Assets.xcassets */,
 				8C18FCF81CCAE4E700E0B180 /* LaunchScreen.storyboard */,
 				8C18FCFB1CCAE4E700E0B180 /* Info.plist */,
@@ -150,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C18FCF21CCAE4E700E0B180 /* ViewController.m in Sources */,
+				8C18FD091CCAE84300E0B180 /* Hero.swift in Sources */,
+				8C18FD031CCAE78200E0B180 /* HeroTableViewController.m in Sources */,
+				8C18FD061CCAE7A700E0B180 /* HeroDetailViewController.m in Sources */,
 				8C18FCEF1CCAE4E700E0B180 /* AppDelegate.m in Sources */,
 				8C18FCEC1CCAE4E700E0B180 /* main.m in Sources */,
 			);
@@ -266,10 +278,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Hero Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nickperkins.Hero-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hero Tracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -277,10 +292,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Hero Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nickperkins.Hero-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hero Tracker-Bridging-Header.h";
 			};
 			name = Release;
 		};
