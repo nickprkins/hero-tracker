@@ -23,6 +23,10 @@
     
     self.navigationItem.title = @"S.H.I.E.L.D Hero Tracker";
     
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.jpg"]];
+    [tempImageView setFrame:self.tableView.frame];
+    
+    self.tableView.backgroundView = tempImageView;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -79,40 +83,62 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 1;
+    return self.heroes.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.heroes.count;
+    return 1;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    return 80.; // you can have your own choice, of course
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 8.; // you can have your own choice, of course
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc] init];
+    headerView.backgroundColor = [UIColor clearColor];
+    return headerView;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableView" forIndexPath:indexPath];
-    
+    cell.backgroundColor = [UIColor colorWithWhite:0.8 alpha:.3];
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+    cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+    cell.detailTextLabel.textColor = [UIColor colorWithWhite:1.0 alpha:.3];
+    cell.layer.shadowOpacity = 1.0;
+    cell.layer.shadowRadius = 0.0;
+    cell.layer.shadowColor = [UIColor blackColor].CGColor;
+    cell.layer.shadowOffset = CGSizeMake(0.0, -1.0);
+    cell.textLabel.textColor = [UIColor colorWithWhite:1.0 alpha:.7];
+    cell.textLabel.highlightedTextColor = [UIColor darkGrayColor];
+    cell.detailTextLabel.highlightedTextColor = [UIColor darkGrayColor];
     
     // Configure the cell...
     self.tableView.contentInset = UIEdgeInsetsMake(70, -5, 0, 0);
     UIImageView *itemImageView = (UIImageView *)[cell imageView];
-    itemImageView.layer.cornerRadius = 22;
+    itemImageView.layer.cornerRadius = 40;
     itemImageView.layer.borderWidth = 1.0f;
     //itemImageView.layer.borderColor = [UIColor concreteColor].CGColor;
     itemImageView.layer.masksToBounds = YES;
     itemImageView.clipsToBounds = YES;
     
     
-    Hero *aHero = self.heroes[indexPath.row];
+    Hero *aHero = self.heroes[indexPath.section];
     cell.textLabel.text = aHero.heroName;
-    cell.detailTextLabel.text = aHero.firstName;
-    //UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 100, 115)];
-//NSString *path = [[NSBundle mainBundle] pathForResource:[item objectForKey:@"imageKey"] ofType:@"png"];
-//    UIImage *theImage = [UIImage imageWithContentsOfFile:path];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Locale: %@", aHero.location];
+    
     NSString *thumbnail = aHero.thumbnail;
     NSString *path = [NSString stringWithFormat:@"%@.jpg", thumbnail];
-    NSLog(@"%@", path);
     cell.imageView.image = [UIImage imageNamed:path];
     
     
@@ -165,7 +191,7 @@
     if ([[segue identifier] isEqualToString:@"segueHeroDetail"])
     {
         NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
-        Hero *selectedHero = self.heroes[indexPath.row];
+        Hero *selectedHero = self.heroes[indexPath.section];
         HeroDetailViewController *heroDetailViewController = (HeroDetailViewController *)[segue destinationViewController];
         heroDetailViewController.hero = selectedHero;
     }

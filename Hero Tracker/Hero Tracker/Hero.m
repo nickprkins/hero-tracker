@@ -31,7 +31,13 @@
         aHero.middleName = [heroDict objectForKey:@"middleName"];
         aHero.nickName = [heroDict objectForKey:@"nickName"];
         aHero.lastName = [heroDict objectForKey:@"lastName"];
+        aHero.height = [heroDict objectForKey:@"height"];
+        aHero.weight = [heroDict objectForKey:@"weight"];
+        aHero.powers = [heroDict objectForKey:@"powers"];
+        aHero.abilities = [heroDict objectForKey:@"abilities"];
         aHero.thumbnail = [heroDict objectForKey:@"thumbnail"];
+        aHero.imagelarge = [heroDict objectForKey:@"imageLarge"];
+        aHero.location = [heroDict objectForKey:@"location"];
     }
     return aHero;
 }

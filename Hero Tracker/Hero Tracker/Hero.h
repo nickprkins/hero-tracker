@@ -15,7 +15,13 @@
 @property (nonatomic) NSString *middleName;
 @property (nonatomic) NSString *nickName;
 @property (nonatomic) NSString *lastName;
+@property (nonatomic) NSString *height;
+@property (nonatomic) NSString *weight;
+@property (nonatomic) NSString *powers;
+@property (nonatomic) NSString *abilities;
 @property (nonatomic) NSString *thumbnail;
+@property (nonatomic) NSString *imagelarge;
+@property (nonatomic) NSString *location;
 
 + (Hero *)heroWithDictionary:(NSDictionary *)heroDict;
 
