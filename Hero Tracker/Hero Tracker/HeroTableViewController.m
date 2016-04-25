@@ -51,15 +51,6 @@
     NSArray *sortDescriptors = [NSArray arrayWithObjects:firstDescriptor, nil];
     NSArray *sortedArray = [heroes sortedArrayUsingDescriptors:sortDescriptors];
     heroes = [sortedArray copy];
-
-    
-    //
-    // 6. Once we have an array of dictionaries, we need to iterate over them and convert them into Agent objects.
-    //
-    //    Type in "forin" below. It should offer code completion for a for-in loop. Just hit enter to accept it.
-    //    Use the "agents" array from above as the array to iterate over. Create an NSDictionary object on the left side
-    //    of the for-in loop. You will use this inside the for loop to create an Agent object.
-    // NICK NOTE: Got help from instructor about all of this.  Review this more to fully understand what happens here.
     
     for (NSDictionary *heroDictionary in heroes) {
         
@@ -67,9 +58,6 @@
         [self.heroes addObject:aHero];
     }
     
-    //
-    // 7. Now that we have agent objects, call a method to instruct the table to reload its data.
-    //
     [[self tableView] reloadData];
 }
 
